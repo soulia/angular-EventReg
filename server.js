@@ -13,6 +13,7 @@ var server = http.createServer(app);
 
 // http://stackoverflow.com/questions/33818217/node-js-how-to-make-default-page-to-be-sth-other-than-index-html
 // app.use(express.static(path.resolve(__dirname, 'app')));  // this defaults to index.html
+// to rename client to app:  mv /home/ubuntu/workspace/client /home/ubuntu/workspace/app
 app.use(express.static(path.resolve(__dirname, 'app'), {index: 'EventDetails.html'}));
 
 server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
